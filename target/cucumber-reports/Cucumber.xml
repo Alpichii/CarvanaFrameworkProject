@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><testsuite failures="0" name="cucumber.runtime.formatter.JUnitFormatter" skipped="0" tests="3" time="52.976698">
+<testcase classname="Validate Carvana Search Functionality" name="Validate Car Finder Menu item" time="16.506006">
+<system-out><![CDATA[Given user is on "https://www.carvana.com"..................................passed
+When user clicks on "CAR FINDER" menu item..................................passed
+Then user should be navigated to "https://www.carvana.com/help-me-search/"..passed
+And user should see "WHAT CAR SHOULD I GET?" text...........................passed
+And user should see "Car Finder can help! Answer a few quick questions to find the right car for you." text.passed
+And user should see "TRY CAR FINDER" link...................................passed
+When user clicks on "TRY CAR FINDER" link...................................passed
+Then user should be navigated to "https://www.carvana.com/help-me-search/qa".passed
+And user should see "What is most important to you in your next car?" text..passed
+And user should see "Select up to 4 in order of importance" text............passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate Carvana Search Functionality" name="Validate SELL/TRADE invalid vin search" time="19.979157">
+<system-out><![CDATA[Given user is on "https://www.carvana.com"..................................passed
+When user clicks on "SELL/TRADE" menu item..................................passed
+Then user should be navigated to "https://www.carvana.com/sell-my-car"......passed
+And user should see "GET A REAL OFFER IN 2 MINUTES" text....................passed
+And user should see "We pick up your car. You get paid on the spot." text...passed
+When user clicks on "VIN" button............................................passed
+And user enters vin number as "12345678912345678"...........................passed
+And user clicks on "GET MY OFFER" button....................................passed
+Then user should see "We couldn’t find that VIN. Please check your entry and try again." text.passed
+]]></system-out>
+</testcase>
+<testcase classname="Validate Carvana Search Functionality" name="Validate AUTO LOAN CALCULATOR under FINANCING menu item" time="16.491535">
+<system-out><![CDATA[Given user is on "https://www.carvana.com"..................................passed
+When user hovers over on "FINANCING" menu item..............................passed
+And user clicks on "AUTO LOAN CALCULATOR" menu item.........................passed
+When user enters "Cost of Car I want" as "10,000"...........................passed
+And user selects "What’s Your credit Score?" as "Excellent: 780"............passed
+And user selects "Choose Your Loan Terms" as "60 Months"....................passed
+And user enters "What is Your Down Payment?" as "1,500".....................passed
+Then user should see the monthly payment as "154.00"........................passed
+]]></system-out>
+</testcase>
+</testsuite>
